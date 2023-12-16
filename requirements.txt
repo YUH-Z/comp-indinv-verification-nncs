@@ -1,0 +1,6 @@
+auto_LiRPA==0.3
+numpy==1.21.6
+torch==1.11.0
+torchinfo==1.7.2
+tqdm==4.64.0
+z3_solver==4.8.17.0

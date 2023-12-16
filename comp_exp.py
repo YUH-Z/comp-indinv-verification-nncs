@@ -203,9 +203,6 @@ if __name__ == '__main__':
                     
                     num_split += 1
                 
-                del s_ind
-                del s_fal
-
             if num_split >= MAX_SPLIT:
                 print("!MAX SPLIT REACHED!")
 
@@ -328,9 +325,6 @@ if __name__ == '__main__':
                     
                     num_split += 1
                 
-                del s_ind
-                del s_fal
-
             if num_split >= MAX_SPLIT:
                 print("!MAX SPLIT REACHED!")
 

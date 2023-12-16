@@ -29,6 +29,10 @@ ALL_SMT_FILES_NONDET = $(shell ls $(NONDET_SMT_QUERIES_DIR)/*.smt2 | sort -g)
 # all targets
 all: det_comp nondet_comp det_mono nondet_mono 
 
+all_mono: det_mono nondet_mono
+
+all_comp: det_comp nondet_comp
+
 # target: deterministic 2d maze - monolithic
 det_mono:
 	for f in $(shell ls $(DET_SMT_QUERIES_DIR)/*.smt2 | sort -V)/; do \

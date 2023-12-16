@@ -35,7 +35,7 @@ all_comp: det_comp nondet_comp
 
 # target: deterministic 2d maze - monolithic
 det_mono:
-	for f in $(shell ls $(DET_SMT_QUERIES_DIR)/*.smt2 | sort -V)/; do \
+	for f in $(shell ls $(DET_SMT_QUERIES_DIR)/*.smt2 | sort -V); do \
 		echo "\nChecking with Z3:"; \
 		echo $$(basename $$f); \
 		$(TIME) -f "%e" -v z3 $$f -st > $(DET_MONO_LOG_DIR)/$$(basename $$f).log; \
@@ -43,7 +43,7 @@ det_mono:
 
 # target: non-deterministic 2d maze - monolithic
 nondet_mono:
-	for f in $(shell ls $(NONDET_SMT_QUERIES_DIR)/*.smt2 | sort -V)/; do \
+	for f in $(shell ls $(NONDET_SMT_QUERIES_DIR)/*.smt2 | sort -V); do \
 		echo "\nChecking with Z3:"; \
 		echo $$(basename $$f); \
 		$(TIME) -f "%e" -v z3 $$f -st > $(NONDET_MONO_LOG_DIR)/$$(basename $$f).log; \
